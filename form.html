@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Rajdhani:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title> Contratar el servicio 🌐</title>
+</head>
+<header>
+    <nav class="navbar">
+
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+            <img src="img/nav.png" alt="logo">
+        </a>
+
+        <!-- BOTÓN HAMBURGUESA -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- CTA DESKTOP -->
+        <a href="#contacto" class="cta-header">Contratar Ahora</a>
+
+    </nav>
+
+    <!-- OVERLAY OSCURO -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- MENÚ LATERAL -->
+    <ul class="nav-menu-side" id="nav-menu-side">
+        <li><a href="planes.html">Planes</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+       <li><a href="index.html#faq">Preguntas frecuentes</a></li>
+        <li><a href="form.html">Consulta a un asesor</a></li>
+    </ul>
+</header>
+
+<style>
+/* ===========================================
+   SECCIÓN CONTACTO FUTURISTA (ADAPTADA)
+=========================================== */
+
+.contact-form {
+    width: 100%;
+    padding: 120px 5%;
+    background: linear-gradient(180deg, #041425, #020509);
+    color: #e6f1ff;
+    font-family: "Roboto", sans-serif;
+}
+
+.contact-form h2 {
+    font-family: "Orbitron", sans-serif;
+    text-align: center;
+    font-size: 2.6rem;
+    color: #00eaff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 12px rgba(0, 200, 255, 0.4);
+}
+
+.contact-form p {
+    color: #d7eaff;
+    font-size: 1.3rem;
+}
+
+/* CONTENEDOR DEL FORM */
+
+.form-container {
+    max-width: 850px;
+    margin: 0 auto;
+    margin-top: 40px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow:
+        0 0 20px rgba(0, 200, 255, 0.28),
+        0 0 55px rgba(0, 200, 255, 0.14);
+}
+
+/* GRUPOS DE FORM */
+
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #003c66;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 16px;
+    border: 1px solid #c7d7e4;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    outline: none;
+    transition: 0.25s ease;
+    background: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #00d2ff;
+    box-shadow: 0 0 10px rgba(0, 200, 255, 0.45);
+}
+
+/* CHECKBOX */
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group label {
+    color: #003c66;
+    font-weight: normal !important;
+}
+
+/* BOTÓN (manteniendo tu clase cta-button) */
+
+.cta-button {
+    background: linear-gradient(90deg, #11457d, #00eaff);
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    color: white !important;
+    font-size: 1.15rem;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 18px rgba(0, 200, 255, 0.35);
+    display: inline-block;
+    text-align: center;
+}
+
+.cta-button:hover {
+    transform: scale(1.03);
+    background: linear-gradient(80deg, #009dff, #0e6a84);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .form-container {
+        padding: 28px;
+    }
+
+    .contact-form h2 {
+        font-size: 2.2rem;
+    }
+}
+
+
+</style>
+
+<body>
+    <!-- Contact Form -->
+   <section class="contact-form" id="contacto">
+    <h2>Solicita tu Servicio</h2>
+    <p style="text-align: center; margin-bottom: 1rem;">
+        Completa el formulario y nos contactaremos contigo en menos de 24 horas
+    </p>
+
+    <div class="form-container">
+        
+        <!-- FORMULARIO CON FORMSUBMIT -->
+        <form action="https://formsubmit.co/nagatopain676@gmail.com" method="POST">
+
+            <!-- EVITA CAPTCHA -->
+            <input type="hidden" name="_captcha" value="false">
+
+            <!-- REDIRECCIÓN DESPUÉS DE ENVIAR -->
+            <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+
+            <!-- ASUNTO DEL CORREO OPCIONAL -->
+            <input type="hidden" name="_subject" value="Nueva Solicitud de Servicio en tu Web">
+
+            <div class="form-group">
+                <label>Nombre Completo *</label>
+                <input type="text" name="nombre" required placeholder="Juan Pérez">
+            </div>
+
+            <div class="form-group">
+                <label>Teléfono/Celular *</label>
+                <input type="tel" name="telefono" required placeholder="+52 123 456 7890">
+            </div>
+
+            <div class="form-group">
+                <label>Email *</label>
+                <input type="email" name="email" required placeholder="correo@ejemplo.com">
+            </div>
+
+            <div class="form-group">
+                <label>Dirección Completa *</label>
+                <input type="text" name="direccion" required placeholder="Calle, número, departamento">
+            </div>
+
+            <div class="form-group">
+                <label>Código Postal *</label>
+                <input type="text" name="cp" required placeholder="12345">
+            </div>
+
+            <div class="form-group">
+                <label>Plan Seleccionado *</label>
+                <select name="plan" required>
+                    <option value="">Selecciona un plan</option>
+                    <option value="300 Mbps - $55">Básico - 300 Mbps ($55.00/mes)</option>
+                    <option value="500 Mbps - $65">Medio - 500 Mbps ($65.00/mes)</option>
+                    <option value="1000 Mbps - $80">Premium - 1000 Mbps ($80.00/mes)</option>
+                </select>
+            </div>
+
+            <button type="submit" class="cta-button" style="width: 100%;">Enviar Solicitud</button>
+        </form>
+    </div>
+</section>
+
+
+    <footer class="footer-tech">
+
+        <!-- ICONOS SOCIALES -->
+        <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" class="social-icon">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+            </a>
+
+            <a href="https://instagram.com" target="_blank" class="social-icon">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+            </a>
+
+            <a href="https://linkedin.com" target="_blank" class="social-icon">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+        </div>
+
+
+        <!-- MENÚ DE ENLACES -->
+        <div class="footer-links">
+            <a href="#planes3d">Planes</a>
+            <span>•</span>
+            <a href="#nosotros">Nosotros</a>
+            <span>•</span>
+            <a href="#faq">FAQ</a>
+            <span>•</span>
+            <a href="#contacto">Programar llamada</a>
+        </div>
+
+        <!-- FRASE CENTRAL -->
+        <div class="footer-slogan">
+            Conectar <span class="alt-font">LO CAMBIA</span> Todo
+        </div>
+
+        <!-- LINEA DIVISORA -->
+        <hr class="footer-divider">
+
+        <!-- DERECHOS -->
+        <p class="footer-copy">
+            © 2025 Sky Connection Group, LLC.
+        </p>
+
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="app.js"></script>
+    <script src="min.js"></script>
+</body>
+
+</html>

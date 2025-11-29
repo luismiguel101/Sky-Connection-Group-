@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Rajdhani:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title> Skyconnection family 🛜</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+
+            <!-- LOGO -->
+            <a href="index.html" class="logo">
+                <img src="img/nav.png" alt="logo">
+            </a>
+
+            <!-- BOTÓN HAMBURGUESA -->
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- CTA DESKTOP -->
+            <a href="#contacto" class="cta-header">Contratar Ahora</a>
+
+        </nav>
+
+        <!-- OVERLAY OSCURO -->
+        <div class="menu-overlay" id="menu-overlay"></div>
+
+        <!-- MENÚ LATERAL -->
+        <ul class="nav-menu-side" id="nav-menu-side">
+            <li><a href="planes.html">Planes</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="index.html#faq">Preguntas frecuentes</a></li>
+            <li><a href="form.html">Consulta a un asesor</a></li>
+        </ul>
+    </header>
+
+    <style>
+        /* ============================
+   SECCIÓN NOSOTROS (ABOUT)
+============================= */
+
+        .about {
+            width: 100%;
+            padding-top: 70px;
+            padding-bottom: 80px;
+            padding-left: 5%;
+            padding-right: 5%;
+            background: radial-gradient(circle at center, #0d1117 0%, #05070b 100%);
+            color: #e6f1ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-container {
+            max-width: 1300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        /* --- IMÁGENES ESFÉRICAS --- */
+
+        .about-images {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .about-images img {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 50%;
+            filter: drop-shadow(0 0 25px rgba(0, 200, 255, 0.35));
+            opacity: 0;
+            transform: translateX(120px);
+        }
+
+        /* --- CONTENIDO (TEXTO) --- */
+
+        .about-content {
+            flex: 1;
+            max-width: 650px;
+            opacity: 0;
+            transform: translateX(80px);
+        }
+
+        .about-content h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.6rem;
+            color: #00eaff;
+            margin-bottom: 40px;
+            padding-top: 30px;
+            letter-spacing: 1px;
+        }
+
+        .about-content p {
+            font-family: "Roboto", sans-serif;
+            line-height: 1.7;
+            margin-bottom: 18px;
+            font-size: 1.3rem;
+            color: #d9e2ec;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            .about-container {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .about-images {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .about-images img {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    </style>
+
+    <body>
+        <section class="about" id="nosotros">
+            <div class="about-container">
+
+                <div class="about-content">
+                    <h2>Sky Connection como empresa</h2>
+                    <p>
+                        En <strong>Sky Connection Group, LLC</strong> somos una empresa familiar con años de experiencia
+                        en el mercado de telecomunicaciones, autorizados por <strong>DSI</strong> para la venta y
+                        distribución oficial de servicios de internet coaxial, fibra óptica, cable DIRECTV y soluciones
+                        inalámbricas a través de <strong>American Telephone and Telegraph Company (AT&T)</strong>.
+                    </p>
+
+                    <p>
+                        Nuestra misión es conectar a la comunidad latina en <strong>California, Florida, Texas,
+                            Illinois,
+                            Georgia y Tennessee</strong> con tecnología confiable, accesible y de alto rendimiento.
+                        Creemos
+                        en
+                        el poder de la comunicación para unir familias, impulsar negocios y mejorar la calidad de vida,
+                        y
+                        por eso trabajamos cada día con compromiso, cercanía y dedicación.
+                    </p>
+
+                    <p>
+                        Nos enorgullece ser un aliado estratégico en ventas digitales y servicios de instalación
+                        profesional,
+                        representando marcas líderes como <strong>AT&T</strong> y <strong>Frontier</strong>. Nuestro
+                        equipo
+                        combina calidez humana con un alto estándar técnico, llevando soluciones modernas, soporte
+                        experto
+                        y una experiencia transparente a cada hogar que conectamos.
+                    </p>
+
+                    <p>
+                        En Sky Connection Group, LLC creemos que la confianza se construye con atención personalizada,
+                        resultados reales y un trato honesto, valores que nos han permitido crecer y consolidarnos como
+                        una
+                        opción segura y profesional para miles de familias latinas.
+                    </p>
+                </div>
+
+                <div class="about-images">
+                    <img src="img/fibra.jpeg" alt="Equipo Sky Connection" />
+                    <img src="img/tecnico.jpeg" alt="Instalaciones y servicios" />
+                </div>
+            </div>
+        </section>
+        <footer class="footer-tech">
+
+            <!-- ICONOS SOCIALES -->
+            <div class="footer-social">
+                <a href="https://facebook.com" target="_blank" class="social-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+                </a>
+
+                <a href="https://instagram.com" target="_blank" class="social-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
+                        alt="Instagram">
+                </a>
+
+                <a href="https://linkedin.com" target="_blank" class="social-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+                </a>
+            </div>
+
+
+            <!-- MENÚ DE ENLACES -->
+            <div class="footer-links">
+                <a href="#planes3d">Planes</a>
+                <span>•</span>
+                <a href="#nosotros">Nosotros</a>
+                <span>•</span>
+                <a href="#faq">FAQ</a>
+                <span>•</span>
+                <a href="#contacto">Programar llamada</a>
+            </div>
+
+            <!-- FRASE CENTRAL -->
+            <div class="footer-slogan">
+                Conectar <span class="alt-font">LO CAMBIA</span> Todo
+            </div>
+
+            <!-- LINEA DIVISORA -->
+            <hr class="footer-divider">
+
+            <!-- DERECHOS -->
+            <p class="footer-copy">
+                © 2025 Sky Connection Group, LLC.
+            </p>
+
+
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+        <script src="app.js"></script>
+        <script src="min.js"></script>
+    </body>
+
+</html>
