@@ -71,16 +71,10 @@ header.scrolled .logo img {
 
 }
 
-/* Asegurar que no se oculte en pantallas grandes */
-@media (min-width: 768px) {
-    .menu-toggle {
-        display: flex !important;
-    }
-}
-
 
 /* ===== BOTÓN HAMBURGUESA ===== */
 .menu-toggle {
+    display: flex !important;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -91,6 +85,8 @@ header.scrolled .logo img {
     transform: translateY(-50%);
     z-index: 2000;
 }
+
+
 
 .menu-toggle span {
     width: 32px;
@@ -114,6 +110,13 @@ header.scrolled .logo img {
     transform: translateY(-8px) rotate(-45deg);
 }
 
+
+/* Asegurar que no se oculte en pantallas grandes */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none; /*SE CAMBIO DE FLEX !IMPORTANT a NONE*/
+    }
+}
 /* ===== OVERLAY ===== */
 .menu-overlay {
     position: fixed;
@@ -213,6 +216,7 @@ header.scrolled .logo img {
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 0;
     color: white;
     padding: 6rem 2rem;
     text-align: center;
