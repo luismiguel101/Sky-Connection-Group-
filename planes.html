@@ -10,179 +10,231 @@
     <link rel="stylesheet" href="./styles.css">
     <title> Planes Sky 🌐</title>
 </head>
-<header>
-    <nav class="navbar">
-
-        <!-- LOGO -->
-        <a href="index.html" class="logo">
-            <img src="img/nav.png" alt="logo">
-        </a>
-
-
-        <!-- BOTÓN HAMBURGUESA -->
-        <div class="menu-toggle" id="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <!-- CTA DESKTOP -->
-        <a href="form.html" class="cta-header">Contratar Ahora</a>
-
-    </nav>
-
-    <!-- OVERLAY OSCURO -->
-    <div class="menu-overlay" id="menu-overlay"></div>
-
-    <!-- MENÚ LATERAL -->
-    <ul class="nav-menu-side" id="nav-menu-side">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="planes.html">Planes</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-       <li><a href="index.html#faq">Preguntas frecuentes</a></li>
-        <li><a href="form.html">Consulta a un asesor</a></li>
-    </ul>
-</header>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap');
-    /* ============================
-      SECCIÓN PLANES TECH
+   @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap');
+
+/* ============================
+   SECCIÓN PLANES TECH
 ============================= */
 
+.plans {
+    padding: 120px 5%;
+    text-align: center;
+    background: linear-gradient(180deg, #032e54 20%, #193074 50%, #0b6dc3 100%);
+    color: #e6f1ff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.plans h2 {
+    font-size: 3.8rem;
+    color: #ffffff;
+    margin-bottom: 50px;
+    font-family: 'Righteous', cursive;
+    background: linear-gradient(135deg, #0193ed 0%, #2a99a8 50%, #04294e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* CONTENEDOR */
+
+.plans-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* TARJETAS */
+
+.plan-card {
+    width: 330px;
+    max-width: 90%;
+    background: rgba(4, 39, 65, 0.55);
+    border: 1px solid rgba(245, 245, 245, 0.25);
+    backdrop-filter: blur(10px);
+    padding: 40px 25px;
+    border-radius: 22px;
+    box-shadow: 0 0 25px rgba(0, 140, 255, 0.15);
+    text-align: left;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.4s ease;
+}
+
+.plan-card:hover {
+    box-shadow: 0 0 40px rgba(0, 170, 255, 0.35);
+    transform: translateY(-10px);
+}
+
+/* TAG RECOMENDADO */
+
+.recommended-tag {
+    background: #00c8ff;
+    color: #03121f;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+/* VELOCIDAD */
+
+.plan-speed {
+    font-size: 2.2rem;
+    color: #08ffffb8;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 12px;
+}
+
+/* PRECIO */
+
+.plan-price {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* FEATURES */
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.plan-features li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #d4eaff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.plan-features li::before {
+    content: "✔";
+    color: #00b6ff;
+    font-weight: bold;
+}
+
+/* BOTÓN CTA */
+
+.cta-button {
+    display: block;
+    text-align: center;
+    background: linear-gradient(90deg, #0078ff, #00eaff);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.35);
+    transition: 0.3s ease;
+}
+
+.cta-button:hover {
+    background: linear-gradient(90deg, #00aaff, #0099ff);
+    transform: scale(1.03);
+}
+
+/* ============================
+        RESPONSIVE
+============================= */
+
+@media (max-width: 1024px) {
+    .plans h2 {
+        font-size: 3.2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .plans-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
     .plans {
-        padding: 120px 5%;
-        text-align: center;
-        background: linear-gradient(180deg, #032e54 20%, #193074 50%, #0b6dc3 100%);
-        color: #e6f1ff;
-        font-family: 'Roboto', sans-serif;
+        padding: 90px 4%;
     }
 
     .plans h2 {
-        font-size: 4rem;
-        color: #ffffff;
-        margin-bottom: 50px;
-        font-family: 'Righteous', cursive;
-        background: linear-gradient(135deg, #0193ed 0%, #2a99a8 50%, #04294e 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        font-size: 2.6rem;
+        margin-bottom: 35px;
     }
-
-    /* CONTENEDOR */
-
-    .plans-container {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        flex-wrap: wrap;
-    }
-
-    /* TARJETAS */
 
     .plan-card {
-        width: 330px;
-        background: rgba(4, 39, 65, 0.55);
-        border: 1px solid rgba(245, 245, 245, 0.25);
-        backdrop-filter: blur(10px);
-        padding: 40px 25px;
-        border-radius: 22px;
-        box-shadow: 0 0 25px rgba(0, 140, 255, 0.15);
-        text-align: left;
-        transform: translateY(80px);
-        opacity: 0;
+        width: 100%;
+        padding: 28px 22px;
     }
-
-    .plan-card:hover {
-        box-shadow: 0 0 40px rgba(0, 170, 255, 0.35);
-        transform: translateY(-10px);
-        transition: 0.4s ease;
-    }
-
-    /* VELOCIDAD */
 
     .plan-speed {
-        font-size: 2.2rem;
-        color: #08ffffb8;
-        font-family: 'Orbitron', sans-serif;
-        margin-bottom: 12px;
+        font-size: 1.8rem;
     }
-
-    /* PRECIO */
 
     .plan-price {
-        font-size: 1.6rem;
-        margin-bottom: 20px;
-        color: #ffffff;
-    }
-
-    /* FEATURES */
-
-    .plan-features {
-        list-style: none;
-        padding: 0;
-        margin-bottom: 25px;
+        font-size: 1.4rem;
     }
 
     .plan-features li {
-        margin-bottom: 10px;
-        font-size: 1.2rem;
-        color: #d4eaff;
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        font-size: 1.05rem;
     }
-
-    .plan-features li::before {
-        content: "✔";
-        color: #00b6ff;
-        font-weight: bold;
-    }
-
-    /* TAG RECOMENDADO */
-
-    .recommended-tag {
-        background: #00c8ff;
-        color: #03121f;
-        padding: 8px 14px;
-        font-size: 0.9rem;
-        font-weight: bold;
-        border-radius: 8px;
-        display: inline-block;
-        margin-bottom: 12px;
-        letter-spacing: 1px;
-    }
-
-    /* BOTÓN CTA */
 
     .cta-button {
-        display: block;
-        text-align: center;
-        background: linear-gradient(90deg, #0078ff, #00eaff);
-        color: #fff;
-        padding: 12px 20px;
-        border-radius: 10px;
-        font-size: 1.1rem;
-        text-decoration: none;
-        box-shadow: 0 0 20px rgba(0, 150, 255, 0.35);
-        transition: 0.3s ease;
+        padding: 14px;
+        font-size: 1rem;
     }
 
-    .cta-button:hover {
-        background: linear-gradient(90deg, #00aaff, #0099ff);
-        transform: scale(1.03);
+    .recommended-tag {
+        font-size: 0.8rem;
+        padding: 6px 12px;
     }
+}
 
-    /* RESPONSIVE */
-
-    @media (max-width: 900px) {
-        .plans-container {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
 </style>
 
 <body>
 
+    <header>
+        <nav class="navbar">
+
+            <!-- LOGO -->
+            <a href="index.html" class="logo">
+                <img src="img/nav.png" alt="logo">
+            </a>
+
+
+            <!-- BOTÓN HAMBURGUESA -->
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- CTA DESKTOP -->
+            <a href="form.html" class="cta-header">Contratar Ahora</a>
+
+        </nav>
+
+        <!-- OVERLAY OSCURO -->
+        <div class="menu-overlay" id="menu-overlay"></div>
+
+        <!-- MENÚ LATERAL -->
+        <ul class="nav-menu-side" id="nav-menu-side">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="planes.html">Planes</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="index.html#faq">Preguntas frecuentes</a></li>
+            <li><a href="form.html">Consulta a un asesor</a></li>
+        </ul>
+    </header>
 
     <!-- Plans -->
     <section class="plans" id="planes">
@@ -198,7 +250,7 @@
                     <li>Capacidad de conexión para varios dispositivos</li>
                     <li>Tarjeta de regalo $50 a nuevos clientes</li>
                 </ul>
-                <a href="#contacto" class="cta-button">Contratar</a>
+                <a href="form.html" class="cta-button">Contratar</a>
             </div>
 
             <div class="plan-card featured">
@@ -212,7 +264,7 @@
                     <li>Velocidad de carga 20 veces más rapida que el internet por cable</li>
                     <li>Tarjeta de regalo de $100 para nuevos clientes</li>
                 </ul>
-                <a href="#contacto" class="cta-button">Contratar</a>
+                <a href="form.html" class="cta-button">Contratar</a>
             </div>
 
             <div class="plan-card">
@@ -227,7 +279,7 @@
                     <li>Conexión ideal para multiples dispositivos sin interrupciones</li>
                     <li>Tarjeta de regalo de $150 para nuevos clientes</li>
                 </ul>
-                <a href="#contacto" class="cta-button">Contratar</a>
+                <a href="form.html" class="cta-button">Contratar</a>
             </div>
         </div>
     </section>
@@ -251,7 +303,7 @@
 
 
         <!-- MENÚ DE ENLACES -->
-      <div class="footer-links">
+        <div class="footer-links">
             <a href="planes.html#300">Planes</a>
             <span>•</span>
             <a href="nosotros.html">Nosotros</a>

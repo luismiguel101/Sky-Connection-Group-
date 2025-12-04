@@ -73,7 +73,7 @@
                     <p class="price">$55 <span>+ TAX</span></p>
                     <p class="details">Router y Modem incluido</p>
                     <p class="note">Aplica con débito automático</p>
-                    <a href="planes.html#300" class="btn-comprar">Comprar Ahora</a>
+                    <a href="form.html" class="btn-comprar">Comprar Ahora</a>
                 </div>
 
                 <!-- PLAN 2 - 1000 MEGAS (CENTRO) -->
@@ -84,7 +84,7 @@
                     <p class="price">$80 <span>+ TAX</span></p>
                     <p class="details">Router y Modem incluido</p>
                     <p class="note">Aplica con débito automático</p>
-                    <a href="planes.html#1000" class="btn-comprar">Comprar Ahora</a>
+                    <a href="form.html" class="btn-comprar">Comprar Ahora</a>
                 </div>
 
 
@@ -95,7 +95,7 @@
                     <p class="price">$65 <span>+ TAX</span></p>
                     <p class="details">Router y Modem incluido</p>
                     <p class="note">Aplica con débito automático</p>
-                    <a href="planes.html#500" class="btn-comprar">Comprar Ahora</a>
+                    <a href="form.html" class="btn-comprar">Comprar Ahora</a>
                 </div>
             </div>
         </div>
@@ -478,23 +478,20 @@
 
 
     </footer>
-
-
-    <script>
+     <script>
         // Form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
+        const contactForm = document.getElementById('contactForm');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
 
-            // En producción, aquí enviarías los datos a EmailJS, Formspree, etc.
             alert('¡Gracias por tu solicitud! 🎉\n\nHemos recibido tu información y un asesor se contactará contigo en menos de 24 horas.\n\nRecibirás un email de confirmación en breve.');
 
-            // Reset form
             this.reset();
-
-            // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-
+    }
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
