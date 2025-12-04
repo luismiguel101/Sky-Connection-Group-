@@ -39,13 +39,14 @@ header.scrolled {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 18px;
     width: 100%;
 }
 
 
 
 .logo img {
-    height: 55px;
+    height: 58px;
     width: auto;
     order: 1;
 }
@@ -64,9 +65,7 @@ header.scrolled .logo img {
     text-decoration: none;
     transition: 0.3s ease;
     border: 2px solid transparent;
-    margin-right: 50px;
-    display: inline-flex;
-    white-space: nowrap;
+    margin-right: 40px;
 }
 
 
@@ -78,7 +77,8 @@ header.scrolled .logo img {
 
 @media (max-width: 768px) {
     .cta-header {
-        margin: 1rem auto 0 auto;  /* siempre visible */
+        margin: 1rem auto 0 auto;
+        /* siempre visible */
         display: inline-block;
     }
 }
@@ -142,7 +142,8 @@ header.scrolled .logo img {
 .nav-menu-side {
     position: fixed;
     top: 0;
-    right: -55%; /* escondido */
+    right: -55%;
+    /* escondido */
     width: 55%;
     height: 100vh;
     background: rgba(15, 28, 58, 0.75);
@@ -177,7 +178,8 @@ header.scrolled .logo img {
 
 /* Hover tech con glow azul-helado */
 .nav-menu-side li a:hover {
-    color: #e9f7ff; /* blanco-azulado */
+    color: #e9f7ff;
+    /* blanco-azulado */
     text-shadow:
         0 0 8px rgba(0, 200, 255, 0.65),
         0 0 14px rgba(0, 200, 255, 0.45),
@@ -1276,6 +1278,9 @@ header.scrolled .logo img {
 
 /* CTA siempre visible */
 @media (max-width: 768px) {
+    .logo img {
+        height: 50px;
+    }
 
     .cta-header {
         display: inline-block !important;
@@ -1333,7 +1338,7 @@ header.scrolled .logo img {
         max-width: 380px;
         transform: none !important;
         margin: 0 auto;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
     }
 
     .card-3d.destacado {
