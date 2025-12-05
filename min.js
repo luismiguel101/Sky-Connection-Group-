@@ -264,3 +264,15 @@ gsap.to(".about-images img:nth-child(1)", {
         ease: "power3.out"
     });
 });
+
+// ANIMACIÓN BOTÓN WHATSAPP
+// ================================
+const whatsappTimeline = gsap.timeline({ paused: true });
+
+whatsappTimeline.to("#whatsapp-btn", {
+    opacity: 1,
+    pointerEvents: "auto",
+    y: 0,
+    duration: 0.6,
+    ease: "power3.out"
+});

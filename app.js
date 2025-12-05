@@ -30,3 +30,18 @@ document.querySelectorAll("#nav-menu-side a").forEach(link => {
         overlay.classList.remove("active");
     });
 });
+
+
+// Botón
+const whatsappBtn = document.getElementById('whatsapp-btn');
+
+// Control del scroll para mostrar el botón (app.js)
+
+let whatsappShown = false;
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200 && !whatsappShown) {
+    whatsappTimeline.play(); // usa la animación definida en min.js
+    whatsappShown = true;
+  }
+});

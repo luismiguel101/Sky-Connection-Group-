@@ -11,196 +11,197 @@
     <title> Skyconnection family 🛜</title>
 </head>
 
-<body>
-    <header>
-        <nav class="navbar">
-
-            <!-- LOGO -->
-            <a href="index.html" class="logo">
-                <img src="img/nav.png" alt="logo">
-            </a>
-
-            <!-- BOTÓN HAMBURGUESA -->
-            <div class="menu-toggle" id="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <!-- CTA DESKTOP -->
-            <a href="form.html" class="cta-header">Contratar Ahora</a>
-
-
-        </nav>
-
-        <!-- OVERLAY OSCURO -->
-        <div class="menu-overlay" id="menu-overlay"></div>
-
-        <!-- MENÚ LATERAL -->
-        <ul class="nav-menu-side" id="nav-menu-side">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="planes.html">Planes</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="index.html#faq">Preguntas frecuentes</a></li>
-            <li><a href="form.html">Consulta a un asesor</a></li>
-        </ul>
-    </header>
-
-    <style>
-        /* ============================
+<style>
+    /* ============================
    SECCIÓN NOSOTROS (ABOUT)
 ============================= */
 
+    .about {
+        width: 100%;
+        padding-top: 120px;
+        /* espacio real por el header fijo */
+        padding-bottom: 80px;
+        padding-left: 5%;
+        padding-right: 5%;
+        background: radial-gradient(circle at center, #0d1117 0%, #05070b 100%);
+        color: #e6f1ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-container {
+        max-width: 1300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+    }
+
+    /* --- IMÁGENES ESFÉRICAS --- */
+    .about-images {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .about-images img {
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 50%;
+        filter: drop-shadow(0 0 25px rgba(0, 200, 255, 0.35));
+        opacity: 0;
+        transform: translateX(120px);
+    }
+
+    /* --- CONTENIDO (TEXTO) --- */
+    .about-content {
+        flex: 1;
+        max-width: 650px;
+        opacity: 0;
+        transform: translateX(80px);
+    }
+
+    .about-content h2 {
+        font-family: "Special Gothic Condensed One", sans-serif;
+        font-size: 3rem;
+        color: #00eaff;
+        margin-bottom: 35px;
+        letter-spacing: 0.9px;
+    }
+
+    .about-content p {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.7;
+        margin-bottom: 18px;
+        font-size: 1.35rem;
+        color: #d9e2ec;
+    }
+
+    /* ============================
+   RESPONSIVE — TABLETS
+============================= */
+    @media (max-width: 900px) {
+
         .about {
-            width: 100%;
-            padding-top: 120px;
-            /* espacio real por el header fijo */
-            padding-bottom: 80px;
-            padding-left: 5%;
-            padding-right: 5%;
-            background: radial-gradient(circle at center, #0d1117 0%, #05070b 100%);
-            color: #e6f1ff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding-top: 140px;
+            /* un poco más para header */
         }
 
         .about-container {
-            max-width: 1300px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 60px;
+            flex-direction: column-reverse;
+            text-align: center;
+            gap: 40px;
         }
 
-        /* --- IMÁGENES ESFÉRICAS --- */
         .about-images {
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         .about-images img {
-            width: 350px;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 50%;
-            filter: drop-shadow(0 0 25px rgba(0, 200, 255, 0.35));
-            opacity: 0;
-            transform: translateX(120px);
-        }
-
-        /* --- CONTENIDO (TEXTO) --- */
-        .about-content {
-            flex: 1;
-            max-width: 650px;
-            opacity: 0;
-            transform: translateX(80px);
+            width: 260px;
+            height: 260px;
         }
 
         .about-content h2 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.8rem;
-            color: #00eaff;
-            margin-bottom: 35px;
-            letter-spacing: 1px;
+            font-size: 2.3rem;
         }
 
         .about-content p {
-            font-family: "Roboto", sans-serif;
-            line-height: 1.7;
-            margin-bottom: 18px;
-            font-size: 1.35rem;
-            color: #d9e2ec;
+            font-size: 1.2rem;
         }
+    }
 
-        /* ============================
-   RESPONSIVE — TABLETS
-============================= */
-        @media (max-width: 900px) {
-
-            .about {
-                padding-top: 140px;
-                /* un poco más para header */
-            }
-
-            .about-container {
-                flex-direction: column-reverse;
-                text-align: center;
-                gap: 40px;
-            }
-
-            .about-images {
-                flex-direction: row;
-                justify-content: center;
-                gap: 20px;
-                flex-wrap: wrap;
-            }
-
-            .about-images img {
-                width: 260px;
-                height: 260px;
-            }
-
-            .about-content h2 {
-                font-size: 2.3rem;
-            }
-
-            .about-content p {
-                font-size: 1.2rem;
-            }
-        }
-
-        /* ============================
+    /* ============================
    RESPONSIVE — MÓVILES
 ============================= */
-        @media (max-width: 600px) {
+    @media (max-width: 600px) {
 
-            .about {
-                padding-top: 150px;
-            }
-
-            .about-images img {
-                width: 220px;
-                height: 220px;
-            }
-
-            .about-content h2 {
-                font-size: 2rem;
-            }
-
-            .about-content p {
-                font-size: 1.1rem;
-                line-height: 1.6;
-            }
+        .about {
+            padding-top: 150px;
         }
 
-        /* ============================
+        .about-images img {
+            width: 220px;
+            height: 220px;
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    }
+
+    /* ============================
    RESPONSIVE — ULTRA SMALL
 ============================= */
-        @media (max-width: 420px) {
+    @media (max-width: 420px) {
 
-            .about-images img {
-                width: 180px;
-                height: 180px;
-            }
-
-            .about-container {
-                gap: 20px;
-            }
-
-            .about-content h2 {
-                font-size: 1.8rem;
-            }
-
-            .about-content p {
-                font-size: 1rem;
-            }
+        .about-images img {
+            width: 180px;
+            height: 180px;
         }
-    </style>
+
+        .about-container {
+            gap: 20px;
+        }
+
+        .about-content h2 {
+            font-size: 1.8rem;
+        }
+
+        .about-content p {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+<body>
 
     <body>
+        <header>
+            <nav class="navbar">
+
+                <!-- LOGO -->
+                <a href="index.html" class="logo">
+                    <img src="img/nav.png" alt="logo">
+                </a>
+
+                <!-- BOTÓN HAMBURGUESA -->
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <!-- CTA DESKTOP -->
+                <a href="form.html" class="cta-header">Contratar Ahora</a>
+
+
+            </nav>
+
+            <!-- OVERLAY OSCURO -->
+            <div class="menu-overlay" id="menu-overlay"></div>
+
+            <!-- MENÚ LATERAL -->
+            <ul class="nav-menu-side" id="nav-menu-side">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="planes.html">Planes</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="index.html#faq">Preguntas frecuentes</a></li>
+                <li><a href="form.html">Contacto</a></li>
+            </ul>
+        </header>
+
         <section class="about" id="nosotros">
             <div class="about-container">
 

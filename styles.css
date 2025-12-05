@@ -420,9 +420,9 @@ header.scrolled .logo img {
    TEXTO
 ================================ */
 .card-3d h3 {
-    font-family: 'Orbitron', sans-serif;
-    color: #ffffff;
-    font-size: 1.7rem;
+    font-family:"Big Shoulders Stencil", sans-serif;
+    color: #e3dfdf;
+    font-size: 2rem;
     margin-bottom: 6px;
 }
 
@@ -497,12 +497,12 @@ header.scrolled .logo img {
     background: radial-gradient(circle at center, #0e1118 0%, #05070d 100%);
     color: #f0f3ff;
     padding: 5rem 0;
-    font-family: 'Rajdhani', sans-serif;
 }
 
 .benefits h2 {
     text-align: center;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Anton", sans-serif;
+    font-style: normal;
     font-size: 4.5rem;
     color: #00c8ff;
     margin-bottom: 5rem;
@@ -544,7 +544,7 @@ header.scrolled .logo img {
 }
 
 .benefit-text h3 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Anton", sans-serif;
     font-size: 3rem;
     color: #00c8ff;
     margin-bottom: 1rem;
@@ -1250,6 +1250,43 @@ header.scrolled .logo img {
     font-size: 1.3rem;
     color: #9eb6d4;
 }
+
+#whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 65px;
+  height: 65px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(40px);
+  transition: transform 0.3s ease;
+}
+
+#whatsapp-btn img {
+  width: 65%;
+}
+
+@media (max-width: 768px) {
+  #whatsapp-btn {
+    width: 55px;
+    height: 55px;
+    bottom: 15px;
+    right: 15px;
+  }
+  #whatsapp-btn img {
+    width: 60%;
+  }
+}
+
 
 /* ===== ANIMATIONS ===== */
 @keyframes fadeInUp {
