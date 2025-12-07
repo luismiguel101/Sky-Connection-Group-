@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 15px; /*TAMAÑO GENERAL EN DEPLOY*/
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -1387,5 +1391,20 @@ header.scrolled .logo img {
     .card-3d:hover,
     .card-3d.destacado:hover {
         transform: translateY(-10px) !important;
+    }
+}
+
+/* Evitar que el diseño escale más en pantallas grandes */
+@media (min-width: 1600px) {
+    html {
+        font-size: 14px;
+    }
+
+    .hero-text img {
+        max-width: 100%;
+    }
+
+    .card-3d:nth-child(2) {
+        transform: translateY(-20px) scale(1.1);
     }
 }
