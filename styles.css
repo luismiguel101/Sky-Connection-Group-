@@ -229,7 +229,7 @@ header.scrolled .logo img {
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 4rem);
     margin-bottom: 1rem;
     animation: fadeInUp 1s;
 }
@@ -420,7 +420,7 @@ header.scrolled .logo img {
    TEXTO
 ================================ */
 .card-3d h3 {
-    font-family:"Big Shoulders Stencil", sans-serif;
+    font-family: "Big Shoulders Stencil", sans-serif;
     color: #e3dfdf;
     font-size: 2rem;
     margin-bottom: 6px;
@@ -1252,39 +1252,40 @@ header.scrolled .logo img {
 }
 
 #whatsapp-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 65px;
-  height: 65px;
-  background: #25D366;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-  cursor: pointer;
-  z-index: 999;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(40px);
-  transition: transform 0.3s ease;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 65px;
+    height: 65px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(40px);
+    transition: transform 0.3s ease;
 }
 
 #whatsapp-btn img {
-  width: 65%;
+    width: 65%;
 }
 
 @media (max-width: 768px) {
-  #whatsapp-btn {
-    width: 55px;
-    height: 55px;
-    bottom: 15px;
-    right: 15px;
-  }
-  #whatsapp-btn img {
-    width: 60%;
-  }
+    #whatsapp-btn {
+        width: 55px;
+        height: 55px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    #whatsapp-btn img {
+        width: 60%;
+    }
 }
 
 
