@@ -8,7 +8,7 @@
 }
 
 html {
-    font-size: 15px; /*TAMAÑO GENERAL EN DEPLOY*/
+    font-size: 15px;
 }
 
 body {
@@ -168,7 +168,6 @@ header.scrolled .logo img {
     right: 0;
 }
 
-/* ===== LINKS ESTILO TECH ELEGANTE ===== */
 .nav-menu-side li a {
     font-family: 'Rajdhani', sans-serif;
     color: #cfefff;
@@ -180,10 +179,9 @@ header.scrolled .logo img {
     letter-spacing: 1.5px;
 }
 
-/* Hover tech con glow azul-helado */
 .nav-menu-side li a:hover {
     color: #e9f7ff;
-    /* blanco-azulado */
+
     text-shadow:
         0 0 8px rgba(0, 200, 255, 0.65),
         0 0 14px rgba(0, 200, 255, 0.45),
@@ -191,7 +189,6 @@ header.scrolled .logo img {
     transform: translateX(6px);
 }
 
-/* Línea luminosa animada */
 .nav-menu-side li a::before {
     content: "";
     position: absolute;
@@ -206,12 +203,10 @@ header.scrolled .logo img {
     transition: 0.35s ease;
 }
 
-/* Línea aparece en hover */
 .nav-menu-side li a:hover::before {
     width: 16px;
 }
 
-/* Responsive */
 @media(max-width: 480px) {
     .nav-menu-side {
         width: 75%;
@@ -257,9 +252,6 @@ header.scrolled .logo img {
     margin-top: 1rem;
 }
 
-/* =========================================================
-   SECCIÓN PLANES 3D — Diseño Profesional Azul Tech
-========================================================= */
 .plans-3d {
     padding: 80px 50px;
     text-align: center;
